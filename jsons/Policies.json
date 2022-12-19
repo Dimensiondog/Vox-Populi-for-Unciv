@@ -91,7 +91,7 @@
         ]
     },
     {
-        "name": "Liberty",
+        "name": "Progress",
         "era": "Ancient era",
         "priorities": {
             "Neutral": 0,
@@ -100,64 +100,64 @@
             "Domination": 10,
             "Scientific": 10
         },
-        "uniques": ["[+1 Culture] [in all cities]"],
         "policies": [
             {
-                "name": "Republic",
-                "uniques": [
-                    "[+1 Production] [in all cities]",
-                    "[+5]% Production when constructing [All] buildings [in all cities]"
-                ],
-                "row": 1,
-                "column": 1
-            },
-            {
-                "name": "Citizenship",
+                "name": "Liberty",
                 "uniques": [
                     "[-25]% tile improvement construction time",
-                    "Free [Worker] appears"
+                    "Free [Worker] appears",
+                    "[+3 Gold] [in all cities]",
                 ],
                 "row": 1,
-                "column": 4
+                "column": 2
             },
             {
-                "name": "Collective Rule",
+                "name": "Organisation",
                 "uniques": [
-                    "[+50]% Production when constructing [Settler] units [in capital]",
-                    "Free [Settler] appears"
+                    "[+3 Production] [in all cities]",
+                   "[+25]% Production when constructing [Civillian] units [in all cities]",
                 ],
-                "requires": ["Republic"],
-                "row": 2,
-                "column": 1
+                "row": 1,
+                "column": 5
             },
+
             {
-                "name": "Representation",
+                "name": "Equality",
                 "uniques": [
-                    "Each city founded increases culture cost of policies [33]% less than normal",
-                    "Empire enters golden age"
+                   "[+1 Happiness] per [15] population [in all cities]",
+"[+1 Happiness] [in all cities]",
+"[-10]% Unhappiness from [Population] [in all cities]",
                 ],
-                "requires": ["Citizenship"],
+                "requires": ["Liberty"],
                 "row": 2,
-                "column": 3
+                "column": 2
             },
             {
                 "name": "Meritocracy",
                 "uniques": [
-                    "[+1 Happiness] [in all cities connected to capital]",
-                    "[-5]% Unhappiness from [Population] [in all non-occupied cities]"
+                    "[+3 Science] from each Trade Route",
+                    "[+3 Food] [in all cities]"
                 ],
-                "requires": ["Citizenship"],
+                "requires": ["Liberty"],
+                "row": 2,
+                "column": 4
+            },
+            {
+                "name": "Expertise",
+                "uniques": [     
+ "[+15]% Production when constructing [All] buildings [in all cities]"
+                ],
+                "requires": ["Organisation"],
                 "row": 2,
                 "column": 5
             },
             {
                 "name": "Liberty Complete",
-                "uniques": ["Free Great Person"]
             }
         ]
     },
     {
-        "name": "Honor",
+        "name": "Authority",
         "era": "Ancient era",
         "priorities": {
             "Neutral": 0,
@@ -167,19 +167,21 @@
             "Scientific": 0
         },
         "uniques": [
-            "[+33]% Strength <vs [Barbarian] units>",
+            "[+25]% Strength <vs [Barbarian] units>",
             "Earn [100]% of killed [Barbarian] unit's [Strength] as [Culture]",
-            "Notified of new Barbarian encampments"
+            "Notified of new Barbarian encampments",
+                    "[+1 Production] [in all cities]",
         ],
         "policies": [
             {
-                "name": "Warrior Code",
+                "name": "Dominance",
                 "uniques": [
-                    "[+15]% Production when constructing [Melee] units [in all cities]",
-                    "Free [Great General] appears"
+                    "Heals [15] damage if it kills a unit"
+                   "Earn [100]% of killed [Military] unit's [Strength] as [Science]"
+"[1] Unit Supply per [20] population [in all cities]"
                 ],
                 "row": 1,
-                "column": 2
+                "column": 4
             },
             {
                 "name": "Discipline",
