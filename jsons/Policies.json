@@ -86,6 +86,8 @@
 "[+10]% [Production] [in capital]"
 "[+10]% [Gold] [in capital]"
 "[+10]% [Faith] [in capital]"
+                    "May buy [Great Engineer] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
+
                 ]
             }
         ]
@@ -153,6 +155,9 @@
             },
             {
                 "name": "Liberty Complete",
+                "uniques": [     
+                    "May buy [Great Artist] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
+                ],
             }
         ]
     },
@@ -228,6 +233,7 @@
                 "uniques": [
                             "Upon capturing a city, receive [7] times its [Food] production as [Culture] immediately",
                             "Upon capturing a city, receive [7] times its [Food] production as [Science] immediately"
+                    "May buy [Great General] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
                 ]
             }
         ]
@@ -297,7 +303,7 @@
                 "name": "Fealty Complete",
                 "uniques": [
                     
-                    "[+3 Science, +3 Production, +3 Culture, +3 Faith] [in all cities in which the majority religion is a major religion]"
+                    "[+3 Science, +3 Production, +3 Culture, +3 Faith] [in all cities in which the majority religion is a major religion]",  "May buy [Great Artist] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
                 ]
             }
         ]
@@ -373,9 +379,138 @@
                 ]
             }
         ]
+    },// this tree will hopefully get lots more when 
+    {
+        "name": "Artistry",
+        "era": "Medieval era",
+        "priorities": {
+            "Neutral": 50,
+            "Cultural": 50,
+            "Diplomatic": 50,
+            "Domination": 40,
+            "Scientific": 50
+        },
+        "uniques": [
+            "[+25]% Great Person generation [in all cities]", "[+10]% [Culture] [in all cities] <during a Golden Age>",
+        ],
+        "policies": [
+            {
+                "name": "Humanism",
+                "uniques": ["[+25]% Golden Age length", "[+1 Science] [in all cities]"],
+                "row": 1,
+                "column": 2
+            },
+            {
+                "name": "Refinement",
+                "uniques": ["[+1 Culture] from every specialist [in all cities]", "[+1 Science] [in all cities]"],
+                "row": 1,
+                "column": 4
+            },
+            {
+                "name": "Heritage",
+                "uniques": ["[+25]% [Culture] from every [Land]",
+                    "[+25]% [Culture] from every [World Wonder]", "[+1 Science] [in all cities]"
+                ],
+                "requires": ["Refinement","Humanism"],
+                "row": 2,
+                "column": 2
+            },
+            {
+                "name": "National Treasure",
+                "uniques": ["[+50 Gold] whenever a Great Person is expended", "Free Great Person", "[+1 Science] [in all cities]"],
+                "requires": ["Refinement"],
+                "row": 2,
+                "column": 4
+            },
+            {
+                "name": "Cultural Exchange",
+                "uniques": [
+                    "[+2 Culture, +2 Production] from all [Ampitheatre] buildings", "[+2 Culture, +2 Production] from all [Opera House] buildings", "[+1 Science] [in all cities]"
+                ],
+                "requires": ["Heritage"],
+                "row": 3,
+                "column": 5
+            },
+            {
+                "name": "Artistry Complete",
+                "uniques": [
+                    "May buy [Great Artist] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
+                ]
+            }
+        ]
     },
     {
-        "name": "Commerce",
+        "name": "Industry",
+        "era": "Industrial era",
+        "priorities": {
+            "Neutral": 0,
+            "Cultural": 10,
+            "Diplomatic": 10,
+            "Domination": 10,
+            "Scientific": 10
+        },
+        "uniques": ["[Gold] cost of purchasing items in cities [-5]%"],
+        "policies": [
+            {
+                "name": "Free Trade",
+                "uniques": ["[-3.75]% Unhappiness from [Population] [in all cities]",
+"[Gold] cost of purchasing items in cities [-5]%", "[Great Merchant] is earned [+50]% faster"
+                ],
+                "row": 1,
+                "column": 2
+            },
+            {
+                "name": "Division of Labour",
+                "uniques": ["[+100]% Production when constructing [Seaport] buildings [in all cities]", "[+3]% [Production] from every [Forge]", "[+3]% [Gold] from every [Forge]",
+"[+3]% [Production] from every [Seaport]", "[+3]% [Gold] from every [Seaport]",
+"[+3]% [Production] from every [Windmill]", "[+3]% [Gold] from every [Windmill]",
+"[+3]% [Production] from every [Workshop]", "[+3]% [Gold] from every [Workshop]",
+"[+3]% [Production] from every [Factory]", "[+3]% [Gold] from every [Factory]",
+"[Gold] cost of purchasing items in cities [-5]%"
+                ],
+                "row": 1,
+                "column": 4
+            },
+            {
+                "name": "Entrepreneurship",
+                "uniques": ["[Gold] cost of purchasing items in cities [-5]%", "[+1 Gold, +2 Production] from [Mine] tiles [in all cities]", 
+"[+1 Gold, +2 Production] from [Lumbermill] tiles [in all cities]", "[+1 Gold, +2 Production] from [Quarry] tiles [in all cities]", "[+25]% Gold from Great Merchant trade missions"
+"[+1 Happiness] from every [Workshop]"],
+                "requires": ["Free Trade"],
+                "row": 2,
+                "column": 2
+            },
+            {
+                "name": "Mercantilism",
+                "uniques": [
+                    "[Gold] cost of purchasing items in cities [-5]%",
+ "[+3]% [Science] from every [Mint]", "[+3]% [Culture] from every [Mint]",
+ "[+3]% [Science] from every [Market]", "[+3]% [Culture] from every [Market]", 
+"[+3]% [Science] from every [Stock Exchange]", "[+3]% [Culture] from every [Stock Exchange]",
+ "[+3]% [Science] from every [Bank]", "[+3]% [Culture] from every [Bank]",
+                ],
+                "requires": ["Division of Labour"],
+                "row": 2,
+                "column": 4
+            },
+            {
+                "name": "Protectionism",
+                "uniques": ["[+10]% [Science] <during We Love The King Day>", "[+10]% [Food] <during We Love The King Day>", "[Gold] cost of purchasing items in cities [-5]%"],
+                "requires": ["Mercantilism","Entrepreneurship"],
+                "row": 3,
+                "column": 4
+            },
+            {
+                "name": "Commerce Complete",
+                "uniques": ["[+4] Happiness from each type of luxury resource"
+                     "[+2 Gold, +2 Production] from every specialist [in all cities]",
+                    "May buy [Great Merchant] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Imperialism",
         "era": "Medieval era",
         "priorities": {
             "Neutral": 0,
@@ -430,7 +565,7 @@
             },
             {
                 "name": "Protectionism",
-                "uniques": ["[+2] Happiness from each type of luxury resource"],
+                "uniques": [],
                 "requires": ["Mercantilism"],
                 "row": 3,
                 "column": 4
@@ -438,7 +573,7 @@
             {
                 "name": "Commerce Complete",
                 "uniques": [
-                    "[+1 Gold] from every [Trading post]",
+                   "[+1 Gold, +2 Production] from every specialist [in all cities]",
                     "[+100]% Gold from Great Merchant trade missions",
                     "May buy [Great Merchant] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
                 ]
