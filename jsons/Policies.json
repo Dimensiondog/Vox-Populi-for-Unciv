@@ -511,7 +511,7 @@
     },
     {
         "name": "Imperialism",
-        "era": "Medieval era",
+        "era": "Industrial era",
         "priorities": {
             "Neutral": 0,
             "Cultural": 10,
@@ -519,70 +519,61 @@
             "Domination": 10,
             "Scientific": 10
         },
-        "uniques": ["[+25]% [Gold] [in capital]"],
+        "uniques": ["[+1] Movement <for [{Military} {Water}] units>", "[+1] Movement <for [Embarked] units>",
+"[+1] Movement <for [Great Genral] units>", "[+1] Sight <for [Naval Melee] units>", "[+1] Sight <for [Melee] units>", 
+"[+10]% Production when constructing [Military] units [in all cities]", "[-10]% Gold cost of upgrading"],
         "policies": [
             {
-                "name": "Naval Tradition",
-                "uniques": [
-                    "[+1] Movement <for [{Military} {Water}] units>",
-                    "[+1] Sight <for [{Military} {Water}] units>",
-                    "Free [Great General] appears"
-                    // "[+2] Movement <for [Great Admiral] units>"
-                    // ToDo: Should be "Free [Great Admiral] appears"
-                ],
+                "name": "Martial Law",
+                "uniques": ["Units in cities cost no Maintenance", "[+1 Happiness] from every [Constabulary]",
+                    "[+5]% Production when constructing [Military] units [in all cities]", "[-5]% Gold cost of upgrading"],
                 "row": 1,
                 "column": 2
             },
             {
-                "name": "Trade Unions",
-                "uniques": [
-                    "[-33]% maintenance on road & railroads",
-                    "[+1 Gold] from every [Harbor]",
-                    "[+1 Gold] from every [Seaport]"
+                "name": "Colonialism",
+                "uniques": ["[+5]% Production when constructing [Military] units [in all cities]", "[-5]% Gold cost of upgrading",
+                    "[+2 Science, +1 Culture] from every [Barracks]",
+"[+2 Science, +1 Culture] from every [Fort]",
+"[+2 Science, +1 Culture] from every [Citadel]",
+"[+2 Science, +1 Culture] from every [Armory]",
+"[+2 Science, +1 Culture] from every [Military Academy]",
                 ],
                 "row": 1,
                 "column": 4
             },
             {
-                "name": "Merchant Navy",
-                "uniques": ["[+3 Production] [in all coastal cities]"],
-                "requires": ["Naval Tradition"],
+                "name": "Explotation",
+                "uniques": ["[+2 Food, +1 Production] from every [Farm]","[+2 Food, +1 Production] from every [Pasture]","[+2 Food, +1 Production] from every [Plantation]",
+"[+1 Science, +1 Production] from every [Ocean]","[+1 Science, +1 Production] from every [Coast]","[+5]% Production when constructing [Military] units [in all cities]", "[-5]% Gold cost of upgrading"],
+                "requires": ["Colonialism","Martial Law"],
                 "row": 2,
                 "column": 2
             },
             {
-                "name": "Mercantilism",
+                "name": "Regimental System",
                 "uniques": [
-                    "[Gold] cost of purchasing items in cities [-25]%",
-                    "[+1 Science] from every [Mint]",
-                    "[+1 Science] from every [Market]",
-                    "[+1 Science] from every [Bank]",
-                    "[+1 Science] from every [Stock Exchange]"
+                   "[Great General] is earned [+33]% faster", "[+5]% Production when constructing [Military] units [in all cities]", "[-5]% Gold cost of upgrading"
                 ],
-                "requires": ["Trade Unions"],
+                "requires": ["Colonialism"],
                 "row": 2,
                 "column": 4
             },
             {
-                "name": "Protectionism",
-                "uniques": [],
-                "requires": ["Mercantilism"],
+                "name": "Civilizing Mission",
+                "uniques": ["[+10]% Production when constructing [All] buildings [in all cities]<in cities with a [Courthouse]>"],"[+5]% Production when constructing [Military] units [in all cities]", "[-5]% Gold cost of upgrading",
+                "requires": ["Explotation"],
                 "row": 3,
-                "column": 4
+                "column": 2
             },
             {
-                "name": "Commerce Complete",
-                "uniques": [
-                   "[+1 Gold, +2 Production] from every specialist [in all cities]",
-                    "[+100]% Gold from Great Merchant trade missions",
-                    "May buy [Great Merchant] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
-                ]
+                "name": "Imperialism Complete",
             }
         ]
     },
     {
         "name": "Rationalism",
-        "era": "Renaissance era",
+        "era": "Industrial era",
         "priorities": {
             "Neutral": 0,
             "Cultural": 10,
