@@ -582,56 +582,57 @@
             "Scientific": 60
         },
         "uniques": [
-            "[+15]% [Science] <while the empire is happy>",
-            "Only available <before adopting [Piety]>"
+            "[+3 Science, +2 Production] from every [Strategic resource]", "[-5]% Unhappiness from [Population] [in all cities]",
+"[+5]% [Science]"
         ],
         "policies": [
             {
-                "name": "Secularism",
-                "uniques": [
-                    "[+2 Science] from every specialist [in all cities]"
+                "name": "Scientific Revolution",
+                "uniques": ["[+2 Science] from every [Jungle]", "[+2 Science] from every [Snow]"
+"[-2]% Unhappiness from [Population] [in all cities]",
+"[+2]% [Science]"
                 ],
                 "row": 1,
                 "column": 2
             },
             {
-                "name": "Humanism",
+                "name": "Enlightenment",
                 "uniques": [
-                    "[+1 Happiness] from every [University]",
-                    "[+1 Happiness] from every [Observatory]",
-                    "[+1 Happiness] from every [Public School]"
+                    "[+1 Happiness] from every [University]", "Free Technology", "[+10]% [Science]<during a Golden Age>", "[-2]% Unhappiness from [Population] [in all cities]",
+"[+2]% [Science]"
                 ],
                 "row": 1,
-                "column": 5
+                "column": 4
+            },
+            {
+                "name": "Empiricism",
+                "uniques": [
+                    "[-20]% Food consumption by specialists [in all cities]", "[-2]% Unhappiness from [Population] [in all cities]",
+"[+2]% [Science]"
+                ],
+                "requires": ["Scientific Revolution"],
+                "row": 2,
+                "column": 2
             },
             {
                 "name": "Free Thought",
-                "uniques": [
-                    "[+1 Science] from every [Trading post]",
-                    "[+17]% [Science] from every [University]"
-                ],
-                "requires": ["Secularism"],
+                "uniques": ["[-16]% Unhappiness from [Followers of this Religion] [in all cities]", "[-2]% Unhappiness from [Population] [in all cities]",
+"[+2]% [Science]"],
+                "requires": ["Empiricism"],
                 "row": 2,
-                "column": 1
-            },
-            {
-                "name": "Sovereignty",
-                "uniques": ["[+1 Gold] from all [Science] buildings"],
-                "requires": ["Humanism"],
-                "row": 2,
-                "column": 5
+                "column": 4
             },
             {
                 "name": "Scientific Revolution",
-                "uniques": ["Science gained from research agreements [+50]%"],
-                "requires": ["Free Thought"],
+                "uniques": ["[+1 Food] per [2] population [in all cities]", "[+2 Production, +2 Gold] from every [Trading Post]"],
+                "requires": ["Empiricism"],
                 "row": 3,
-                "column": 1
+                "column": 2
             },
             {
                 "name": "Rationalism Complete",
                 "uniques": [
-                    "[2] Free Technologies",
+                    "[Great Scientist] is earned [+33]% faster", "[+25]% growth [in all cities]"
                     "May buy [Great Scientist] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>"
                 ]
             }
